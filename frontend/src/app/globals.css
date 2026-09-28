@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+:root {
+  --primary-navy: #0b1f44;
+  --primary-blue: #1d4ed8;
+  --accent-saffron: #f59e0b;
+  --accent-orange: #ea580c;
+  --success-emerald: #10b981;
+  --surface-light: #f8fafc;
+  --card-bg: #ffffff;
+  --text-dark: #0f172a;
+  --text-muted: #64748b;
+  --border-light: #e2e8f0;
+}
+
+body {
+  background-color: #f8fafc;
+  color: #0f172a;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Glassmorphism effects */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(226, 232, 240, 0.8);
+}
+
+.glass-dark {
+  background: rgba(11, 31, 68, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Custom Gradients */
+.gradient-hero {
+  background: radial-gradient(120% 120% at 50% 0%, #1e3a8a 0%, #0b1f44 60%, #061126 100%);
+}
+
+.gradient-card {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+}
+
+.gradient-accent {
+  background: linear-gradient(135deg, #f59e0b 0%, #ea580c 100%);
+}
+
+/* Animation utilities */
+@keyframes pulseSubtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.9; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulseSubtle 3s ease-in-out infinite;
+}
